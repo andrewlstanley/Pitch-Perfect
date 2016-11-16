@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,14 +16,17 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="4Ov-FV-yCo">
+                            <stackView opaque="NO" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" axis="vertical" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4Ov-FV-yCo">
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AHm-MI-ykc">
+                                    <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="AHm-MI-ykc">
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dA7-RU-3JG">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="140" id="BeQ-h4-0G8"/>
+                                                </constraints>
                                                 <state key="normal" image="Record"/>
                                                 <connections>
                                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5V3-Cj-HEg"/>
@@ -33,13 +37,16 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BoM-8H-a0r">
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIR-ed-uPD">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="f7b-N2-DqS"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="voG-we-IwG">
+                                    <stackView opaque="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="voG-we-IwG">
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tos-14-h3n">
                                                 <constraints>
@@ -58,9 +65,26 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="4Ov-FV-yCo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TDF-dR-Wm3"/>
                             <constraint firstItem="4Ov-FV-yCo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dDX-dj-gRI"/>
-                            <constraint firstItem="4Ov-FV-yCo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="iZI-ZK-Dha"/>
+                            <constraint firstItem="4Ov-FV-yCo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="eJ4-GN-Fq1"/>
+                            <constraint firstAttribute="bottom" secondItem="4Ov-FV-yCo" secondAttribute="bottom" id="hZ0-aU-jvn"/>
+                            <constraint firstItem="4Ov-FV-yCo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="67" id="rMh-fe-zGF"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="eJ4-GN-Fq1"/>
+                                <exclude reference="hZ0-aU-jvn"/>
+                                <exclude reference="rMh-fe-zGF"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="eJ4-GN-Fq1"/>
+                                <include reference="hZ0-aU-jvn"/>
+                                <include reference="rMh-fe-zGF"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="hKt-8S-4os"/>
                     <connections>
@@ -83,7 +107,7 @@
                         <viewControllerLayoutGuide type="bottom" id="M01-cw-Pzj"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ey6-GX-ATl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="FNF-8y-2CF">

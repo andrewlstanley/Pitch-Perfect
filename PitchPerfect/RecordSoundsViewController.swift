@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  RecordSoundsViewController.swift
 //  PitchPerfect
 //
 //  Created by AndrewLStanley on 11/7/16.
@@ -16,21 +16,9 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
 
     var audioRecorder: AVAudioRecorder!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         stopRecording.isEnabled = false
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-   
 
     @IBAction func recordAudio(_ sender: AnyObject) {
         print("Button pressed!")
