@@ -16,7 +16,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" axis="vertical" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4Ov-FV-yCo">
@@ -25,7 +25,7 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dA7-RU-3JG">
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="140" id="BeQ-h4-0G8"/>
+                                                    <constraint firstAttribute="height" constant="150" id="BeQ-h4-0G8"/>
                                                 </constraints>
                                                 <state key="normal" image="Record"/>
                                                 <connections>
@@ -107,7 +107,7 @@
                         <viewControllerLayoutGuide type="bottom" id="M01-cw-Pzj"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ey6-GX-ATl">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="FNF-8y-2CF">
@@ -160,17 +160,12 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Qt2-m9-Sso">
-                                        <subviews>
-                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Md-ck-nKK" userLabel="rabbitButton">
-                                                <state key="normal" image="Stop-1"/>
-                                                <connections>
-                                                    <action selector="playSoundForButton:" destination="3R2-B1-dEr" eventType="touchUpInside" id="33e-fI-Cz9"/>
-                                                    <action selector="stopButtonPressed:" destination="3R2-B1-dEr" eventType="touchUpInside" id="b5n-Kh-q8u"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U9P-MO-6Ox">
+                                        <state key="normal" image="Stop-1"/>
+                                        <connections>
+                                            <action selector="stopButtonPressed:" destination="3R2-B1-dEr" eventType="touchUpInside" id="ecb-vc-Z9I"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -188,7 +183,7 @@
                         <outlet property="rabbitButton" destination="6sy-Fw-YXq" id="j23-Kd-LfG"/>
                         <outlet property="reverbButton" destination="8vj-uK-oeh" id="RD2-Su-3tL"/>
                         <outlet property="snailButton" destination="Sgb-Ey-ub6" id="yxe-jF-xet"/>
-                        <outlet property="stopButton" destination="4Md-ck-nKK" id="f0P-DA-dlo"/>
+                        <outlet property="stopButton" destination="U9P-MO-6Ox" id="meZ-Sw-cgs"/>
                         <outlet property="vaderButton" destination="1Jx-fl-YFS" id="vG7-ZI-Ub5"/>
                     </connections>
                 </viewController>
